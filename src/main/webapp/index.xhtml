@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="jakarta.faces.html"
+	xmlns:f="jakarta.faces.core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Prueba de Inicio</title>
+</h:head>
+<h:body>
+	<h1>#{beanP.prueba}</h1>
+	<h:form>
+		<h2>Registro de Aspirante</h2>
+		<h:panelGrid columns="2" columnsClasses="label, input">
+			<h:outputLabel for="nombres" value="Nombres: " />
+			<h:inputText id="nombres" value="#{aspiranteBean.dto.nombre}" />
+
+			<h:outputLabel for="apellidos" value="Apellidos: " />
+			<h:inputText id="apellidos" value="#{aspiranteBean.dto.apellidos}" />
+		</h:panelGrid>
+		<h:commandButton value="Registrar" action="#{aspiranteBean.registrarAspirante}"/>
+	</h:form>
+</h:body>
+</html>
