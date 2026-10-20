@@ -1,15 +1,14 @@
-/* Importar una fuente limpia (opcional) */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 :root {
-    --primary-color: #3b82f6;      /* Azul moderno */
-    --primary-hover: #2563eb;      /* Azul oscuro para hover */
-    --bg-color: #f3f4f6;           /* Fondo gris muy claro */
-    --card-bg: #ffffff;            /* Fondo del formulario */
-    --text-main: #1f2937;          /* Texto principal oscuro */
-    --text-muted: #4b5563;         /* Texto secundario gris */
-    --border-color: #d1d5db;       /* Bordes sutiles */
-    --radius: 10px;                /* Redondeo de bordes */
+    --primary-color: #3b82f6;     
+    --primary-hover: #2563eb;     
+    --bg-color: #f3f4f6;         
+    --card-bg: #ffffff;           
+    --text-main: #1f2937;         
+    --text-muted: #4b5563;         
+    --border-color: #d1d5db;      
+    --radius: 10px;               
 }
 
 body {
