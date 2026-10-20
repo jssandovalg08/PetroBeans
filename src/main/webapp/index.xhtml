@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="jakarta.faces.html"
-	xmlns:f="jakarta.faces.core">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
 <h:head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Prueba de Inicio</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Prueba de Inicio</title>
+    <!-- Carga de la hoja de estilos en JSF -->
+    <h:outputStylesheet library="css" name="styles.css" />
 </h:head>
 <h:body>
-	<h1>#{beanP.prueba}</h1>
-	<h:form>
-		<h2>Registro de Aspirante</h2>
-		<h:panelGrid columns="2" columnsClasses="label, input">
-			<h:outputLabel for="nombres" value="Nombres: " />
-			<h:inputText id="nombres" value="#{aspiranteBean.dto.nombre}" />
+    <h1>#{beanP.prueba}</h1>
+    
+    <div class="form-container">
+        <h:form>
+            <h2>Registro de Aspirante</h2>
+            
+            <h:panelGrid columns="2" columnClasses="label, input" styleClass="form-grid">
+                <h:outputLabel for="nombres" value="Nombres: " />
+                <h:inputText id="nombres" value="#{aspiranteBean.dto.nombre}" a:placeholder="Ej. Juan Pérez" xmlns:a="jakarta.faces.passthrough" />
 
-			<h:outputLabel for="apellidos" value="Apellidos: " />
-			<h:inputText id="apellidos" value="#{aspiranteBean.dto.apellidos}" />
-		</h:panelGrid>
-		<h:commandButton value="Registrar" action="#{aspiranteBean.registrarAspirante}"/>
-	</h:form>
+                <h:outputLabel for="apellidos" value="Apellidos: " />
+                <h:inputText id="apellidos" value="#{aspiranteBean.dto.apellidos}" a:placeholder="Ej. Gómez" xmlns:a="jakarta.faces.passthrough" />
+            </h:panelGrid>
+            
+            <h:commandButton value="Registrar" action="#{aspiranteBean.registrarAspirante}" styleClass="btn-submit"/>
+        </h:form>
+    </div>
 </h:body>
 </html>
